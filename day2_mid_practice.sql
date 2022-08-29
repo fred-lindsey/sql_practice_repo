@@ -3,7 +3,8 @@
 -- Write an SQL query to calculate the bonus of each employee. The bonus of an employee is 100% of their salary 
 -- if the ID of the employee is an odd number and the employee name does not start with the character 'M'. The bonus of an employee is 0 otherwise.
 
-Return the result table ordered by employee_id.
+#QUESTION 1
+#Return the result table ordered by employee_id.
 # Write your MySQL query statement below
 SELECT
     employee_id,
@@ -22,3 +23,24 @@ FROM
     Employees
 ORDER BY
     employee_id;
+    
+#QUESTION 2
+
+-- Write an SQL query to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement 
+-- and no intermediate temporary tables.
+
+-- Note that you must write a single update statement, do not write any select statement for this problem.
+
+# Use update to reference the table to update, followed by the column to update, indicated with SET (Salary, then sex)
+UPDATE
+    Salary
+# SET is the column to update
+SET
+# set the parameter with a CASE statement, "for Sex, if..."
+    sex = CASE sex
+    # swap male to female
+        WHEN 'm' then 'f'
+        #swap all others to male
+        ELSE 'm'
+        # terminate with END statement
+    END;
