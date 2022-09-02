@@ -1,0 +1,7 @@
+CREATE TABLE cats (name VARCHAR(10), age INT);
+
+SHOW TABLES;
+SHOW COLUMNS FROM cats;
+DESC cats; 
+
+DROP TABLE cats;
