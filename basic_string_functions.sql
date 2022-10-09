@@ -53,7 +53,6 @@ SELECT
 		(author_lname, " , ", author_fname) AS author,
 	CONCAT
 		(stock_quantity, " in stock") AS quantity
-        
 FROM
 	books
 ORDER BY(quantity);
